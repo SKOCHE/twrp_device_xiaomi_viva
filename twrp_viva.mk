@@ -29,4 +29,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := Redmi/viva_global/viva:12/SP1A.210812.016/V14.0.5.0.TGDMIXM:user/release-keys
 
-# conditions for share or recreate: always mention credits for lopestom.
