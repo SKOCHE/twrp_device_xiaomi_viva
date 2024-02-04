@@ -61,14 +61,15 @@ jobs:
         chmod a+x ~/bin/repo
         sudo ln -sf ~/bin/repo /usr/bin/repo
 
-    - name: Sync recovery source and device tree
+    - name: Repo Sync
       run: |
-       PATH=~/bin:$PATH
-       mkdir twrp
-       cd twrp
-       repo init -u $MANIFEST --depth=1
-       repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
-       rm -rf .repo
+        repo sync -j$(nproc --all) --force-sync
+      working-directory: workspace
+      
+    - name: Clone device tree
+      run: |
+        git clone ${{ github.event.inputs.DEVICE_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }}
+      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
              
     - name: Checkout device tree
       uses: actions/checkout@v2
