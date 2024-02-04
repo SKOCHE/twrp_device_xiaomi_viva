@@ -96,4 +96,3 @@ jobs:
        name: TWRP37x_12
        files: | 
          twrp/out/target/product/viva/boot*.img
-
