@@ -17,7 +17,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/xiaomi/viva/device.mk)
 
 PRODUCT_DEVICE := viva
-PRODUCT_NAME := twrp_pissarro
+PRODUCT_NAME := twrp_viva
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := viva
 PRODUCT_MANUFACTURER := Xiaomi
