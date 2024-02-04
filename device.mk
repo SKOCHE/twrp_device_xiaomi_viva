@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_TARGET_VNDK_VERSION := 31
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -85,7 +85,7 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
 
 # Vibrator modules
 TARGET_RECOVERY_DEVICE_MODULES += \
-    android.hardware.vibrator-V2-ndk_platform.so
+    android.hardware.vibrator-V1-ndk_platform.so
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.vibrator-V2-ndk_platform.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.vibrator-V1-ndk_platform.so
